@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FRCC Excellence Program | Application</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Base Variables & Reset */
+    :root {
+      --bg-color: #CDE8F6; /* Matched to your uploaded light blue */
+      --card-bg: #FFFFFF;
+      --text-main: #1A1A1A;
+      --text-muted: #666666;
+      --border-color: #E0E0E0;
+      --primary-accent: #0056b3;
+      --zovac-dark: #121212;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    /* Card Container */
+    .portal-container {
+      background-color: var(--card-bg);
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    /* Header Section */
+    .header {
+      text-align: center;
+      padding: 30px 20px 20px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .header img {
+      max-width: 180px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    .header h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+    
+    .header p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 5px;
+    }
+
+    /* Form Section */
+    .form-content {
+      padding: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    input[type="file"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--primary-accent);
+    }
+
+    /* Toggle Logic */
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 10px;
+    }
+
+    .radio-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #experience-container {
+      display: none; /* Hidden by default */
+      margin-top: 15px;
+      padding: 15px;
+      background-color: #F8F9FA;
+      border-radius: 6px;
+      border: 1px dashed var(--border-color);
+    }
+
+    /* Payment Section */
+    .payment-box {
+      background-color: #F8F9FA;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+    
+    .payment-box h3 {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+
+    /* Submit Button */
+    .submit-btn {
+      width: 100%;
+      background-color: var(--primary-accent);
+      color: #fff;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .submit-btn:hover {
+      background-color: #004494;
+    }
+
+    /* ZOVAC Footer */
+    .zovac-footer {
+      width: 100%;
+      max-width: 600px;
+      background-color: var(--zovac-dark);
+      padding: 15px 20px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer-text {
+      color: #A0A0A0;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* ZOVAC Logo CSS from Playbook */
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      font-family: 'Michroma', sans-serif;
+      font-weight: 400;
+      font-size: 1.3rem;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+    .logo-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #E53935;
+      border-radius: 50%;
+      margin-left: 4px;
+      margin-bottom: -1px;
+      flex-shrink: 0;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 480px) {
+      .form-content { padding: 20px; }
+      .header { padding: 20px 15px 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="portal-container">
+    
+    <div class="header">
+      <a href="https://share.google/6wY1rLcXUznNy2bOM" target="_blank">
+        <img src="https://raw.githubusercontent.com/zovacai-cloud/host_image/main/frcc.jpg" alt="FRCC Logo">
+      </a>
+      <h2>Professional Excellence Program</h2>
+      <p>Batch 1 Application Portal | Secure Registration</p>
+    </div>
+
+    <div class="form-content">
+      <form id="frccForm" onsubmit="handleFormSubmit(event)">
+        
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" required placeholder="Enter your full name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Mobile Number</label>
+          <input type="tel" id="phone" required placeholder="10-digit mobile number">
+        </div>
+
+        <div class="form-group">
+          <label for="stream">Stream Selection</label>
+          <select id="stream" required>
+            <option value="" disabled selected>Select your preferred stream</option>
+            <option value="safety">Food Safety Management System</option>
+            <option value="nutrition">Food Nutrition and Fortifications</option>
+            <option value="testing">Food Testing and Analysis</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Experience Level</label>
+          <div class="radio-group">
+            <label class="radio-item">
+              <input type="radio" name="experience" value="fresher" onclick="toggleExperience(false)" checked> Fresher
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="experience" value="experienced" onclick="toggleExperience(true)"> Experienced
+            </label>
+          </div>
+        </div>
+
+        <div id="experience-container">
+          <label for="yearsExp">Years of Experience</label>
+          <input type="text" id="yearsExp" placeholder="e.g., 2 years in QA">
+        </div>
+
+        <div class="form-group" style="margin-top: 25px;">
+          <label for="resume">Upload CV / Resume (PDF format)</label>
+          <input type="file" id="resume" accept=".pdf" required>
+        </div>
+
+        <div class="payment-box">
+          <h3>Payment Verification</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">Registration Fee: ₹2800/-. Please upload your transaction proof to secure your slot.</p>
+          
+          <div class="form-group">
+            <label for="utrNumber">12-Digit UTR / Transaction ID</label>
+            <input type="text" id="utrNumber" required placeholder="Enter UTR Number">
+          </div>
+          
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="paymentScreenshot">Upload Payment Screenshot</label>
+            <input type="file" id="paymentScreenshot" accept="image/*" required>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Application</button>
+
+      </form>
+    </div>
+  </div>
+
+  <div class="zovac-footer">
+    <span class="footer-text">Engineered by</span>
+    <a href="https://zovac.netlify.app" target="_blank" class="nav-logo">
+      ZOVAC<span class="logo-dot"></span>
+    </a>
+  </div>
+
+  <script>
+    // Logic to toggle the experience input field smoothly
+    function toggleExperience(isExperienced) {
+      const expContainer = document.getElementById('experience-container');
+      const yearsInput = document.getElementById('yearsExp');
+      
+      if (isExperienced) {
+        expContainer.style.display = 'block';
+        yearsInput.setAttribute('required', 'true');
+      } else {
+        expContainer.style.display = 'none';
+        yearsInput.removeAttribute('required');
+        yearsInput.value = ''; // Clear value if hidden
+      }
+    }
+
+    // App Script submission simulation
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      const btn = document.querySelector('.submit-btn');
+      btn.innerText = 'Processing...';
+      btn.style.backgroundColor = '#666';
+      
+      // Here you will link Google App Script google.script.run function later.
+      // Example: google.script.run.withSuccessHandler(onSuccess).processForm(this);
+      
+      setTimeout(() => {
+        alert("Application submitted successfully! Our admin will verify your payment.");
+        btn.innerText = 'Submit Application';
+        btn.style.backgroundColor = 'var(--primary-accent)';
+        document.getElementById('frccForm').reset();
+        toggleExperience(false); // Reset toggle
+      }, 1500);
+    }
+  </script>
+
+</body>
+</html>
